@@ -88,13 +88,11 @@ print("sum of even numbers between 1-100 is : ", sum)
 
 # Print a pyramid pattern.
 
-rows = int(input("enter a number of rows: "))
+rows = int(input("Enter number of rows: "))
 
 for i in range(1, rows + 1):
-    for j in range(i):
-        print("*", end= " ")
-    print()
-
+    print(" " * (rows - i), end="")
+    print("*" * (2 * i - 1))
 
 # Find all divisors of a number.
 
