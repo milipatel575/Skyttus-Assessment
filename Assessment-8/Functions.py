@@ -98,47 +98,51 @@ merge(l1, l2)
 
 # Function to find GCD of two numbers.
 
-#GCD works using:
-#DIVIDE → REMAINDER → REPEAT
+# formula =>
+# gcd(a, b) = gcd(b,a mod b)
 
-def findGCD(a, b):
-     while b != 0:
-          a, b = b, a % b
-     print("GCD =", a)
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
 
-x = int(input("Enter First Number: "))
-y = int(input("Enter Second Number: "))
+    print("GCD =", a)
 
-findGCD(x, y)
+
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+
+gcd(x, y)
+
 
 # Function to find area of rectangle.
 
 def rectangle_area(length, breadth):
-     area = length * breadth
-     print("Area Of Reactangle = ", area)
+    area = length * breadth
+    print("Area of Rectangle =", area)
 
-l = float(input("Enter length: "))
-b = float(input("Enter breadth: "))
+
+l = float(input("Enter Length: "))
+b = float(input("Enter Breadth: "))
 
 rectangle_area(l, b)
-
 
 # Function to check Armstrong number.
 
 def armstrong(num):
-     temp = num
-     total = 0 
-     digits = len(str(num))
+    temp = num
+    total = 0
+    digits = len(str(num))
 
-     while temp > 0:
-          digit = temp % 10
-          total = total + digit ** digits
-          temp = temp // 10
-     
-     if total == num:
-          print("Armstrong Number")
-     else:
-          print("Not Armstrong Number")
+    while temp > 0:
+        digit = temp % 10
+        total = total + digit ** digits
+        temp = temp // 10
 
-n = int(input("Enter a Number: "))
+    if total == num:
+        print("Armstrong Number")
+    else:
+        print("Not Armstrong Number")
+
+
+n = int(input("Enter a number: "))
 armstrong(n)
